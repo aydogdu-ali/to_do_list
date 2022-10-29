@@ -20,7 +20,7 @@ const Addtodo = ({ getTask }) => {
 
   // veriyi Api ye gönderme fonksiyonunu tanımlıyorum
   const addNewTodo = async (newTask) => {
-    const url = "https://63518c4d3e9fa1244e618a25.mockapi.io/api/list";
+    const url = "https://635c7e3af0bc26795bffa10b.mockapi.io/api/task";
     try {
       await axios.post(url, newTask);
     } catch (error) {
@@ -42,20 +42,22 @@ const Addtodo = ({ getTask }) => {
             className="form-control"
             id="exampleFormControlInput1"
             placeholder="lütfen işi giriniz"
-            value={task}
+            required
+            // value={task}
             onChange={(e) => setTask(e.target.value)}
           />
         </div>
         <div className="mb-3">
           <label htmlFor="exampleFormControlInput1" className="form-label">
-            {" "}
-            Tarih{" "}
+        
+            Tarih
           </label>
           <input
             type="date"
             className="form-control"
             id="exampleFormControlInput1"
-            value={date}
+            required
+            // value={date}
             onChange={(e) => setDate(e.target.value)}
           />
         </div>

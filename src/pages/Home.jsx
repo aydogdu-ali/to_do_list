@@ -12,7 +12,7 @@ const Home = () => {
 
   // Api den gelen veriyi karşılamak için state tanımladım
   const [task, setTask] = useState([])
-  const url ="https://63518c4d3e9fa1244e618a25.mockapi.io/api/list"
+  const url ="https://635c7e3af0bc26795bffa10b.mockapi.io/api/task"
 
   // butonun onclick eventine neler yaptıracağımızı tanımladık.
   const change = (e) => {
@@ -43,9 +43,11 @@ useEffect(() => {
       className=" btn btn-warning">{text}</button>
           
 
-      {show && <Addtodo />}
+      {show && <Addtodo  getTask={getTask}/>}
 
-      <Listtodo task = {task}/>
+
+{/*Api den gelen veriyi DOM da göstermek için veriyi componente gönderiyorum*/}
+      <Listtodo task = {task} getTask={getTask}/>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Listtodo = ({ task,getTask }) => {
 // listeden istediğimiz görevi sildirmek için api isteği gönderiyorum.
 const deleteTask = async (id)=>{
 
-  const url ="https://63518c4d3e9fa1244e618a25.mockapi.io/api/list"
+  const url ="https://635c7e3af0bc26795bffa10b.mockapi.io/api/task"
 
   try {
     await axios.delete(`${url}/${id}`)
